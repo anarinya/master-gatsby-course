@@ -6,7 +6,6 @@ const loadingSVG =
   'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAECAQAAADsOj3LAAAADklEQVR42mNkgANGQkwAAJoABWH6GPAAAAAASUVORK5CYII=';
 
 export default function LoadingGrid({ count }) {
-  console.log('');
   return (
     <ItemsGridStyles>
       {Array.from(Array(count).keys(), (v) => (

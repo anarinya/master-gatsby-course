@@ -18,19 +18,16 @@ const PizzaStyles = styled.div`
   }
 `;
 
-const PizzaListItem = ({ pizza }) => {
-  console.log(pizza);
-  return (
-    <PizzaStyles>
-      <Link to={`/pizza/${pizza.slug.current}`}>
-        <h2>
-          <span className="mark">{pizza.name}</span>
-        </h2>
-      </Link>
-      <p>{pizza.toppings.map((topping) => topping.name).join(', ')}</p>
-      <Img fluid={pizza.image && pizza.image.asset.fluid} alt={pizza.name} />
-    </PizzaStyles>
-  );
-};
+const PizzaListItem = ({ pizza }) => (
+  <PizzaStyles>
+    <Link to={`/pizza/${pizza.slug.current}`}>
+      <h2>
+        <span className="mark">{pizza.name}</span>
+      </h2>
+    </Link>
+    <p>{pizza.toppings.map((topping) => topping.name).join(', ')}</p>
+    <Img fluid={pizza.image && pizza.image.asset.fluid} alt={pizza.name} />
+  </PizzaStyles>
+);
 
 export default PizzaListItem;
