@@ -39,7 +39,7 @@ export default function OrderPage({ data }) {
   return (
     <>
       <SEO title="Order a Pizza!" />
-      <OrderFormStyles onSubmit={submitOrder}>
+      <OrderFormStyles onSubmit={submitOrder} data-netlify="true">
         <fieldset disabled={loading}>
           <legend>Your Info</legend>
           <label htmlFor="name">
