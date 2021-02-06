@@ -35,7 +35,11 @@ export default function SEO({ children, location, description, title, image }) {
         content={site.siteMetadata.title}
         key="ogsitename"
       />
-      <meta property="og:description" content={description} key="ogdesc" />
+      <meta
+        property="og:description"
+        content={description || site.siteMetadata.description}
+        key="ogdesc"
+      />
       {children}
     </Helmet>
   );
